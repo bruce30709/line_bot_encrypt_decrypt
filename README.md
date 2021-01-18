@@ -1,3 +1,4 @@
 # line_bot_encrypt_decrypt
 this is a line bot with heroku webhook server
-Usage:0 encrypt_string 1 decrypt_string
+Usage:  0 encrypt_string 
+        1 decrypt_string
