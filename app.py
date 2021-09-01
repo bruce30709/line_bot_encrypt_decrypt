@@ -1,6 +1,5 @@
 # -*- coding: UTF-8 -*-
 from flask import Flask, request, abort
-import DAN, csmapi, random, time, threading
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import *
@@ -54,12 +53,12 @@ def handle_message(event):
         '''
         if b[0]=='0':
             a = Base64()
-            message=a.Encode(str.encode(b[1]))
+            message=TextSendMessage(a.Encode(str.encode(b[1])))
             print(message)
             line_bot_api.reply_message(event.reply_token,  message)
         if b[0]=="1":
             a = Base64()
-            message=a.Decode(b[1]," ").decode()
+            message=TextSendMessage(a.Decode(b[1]," ").decode())
             print(message)
             line_bot_api.reply_message(event.reply_token,  message)
             #print(ODF_data)
