@@ -74,11 +74,6 @@ def handle_message(event):
             #print(ODF_data)
     except Exception as e:
         print(e)
-        if str(e).find('mac_addrnot found:') != -1:
-            print('Reg_addris not found. Try to re-register...')
-            DAN.device_registration_with_retry(ServerURL, Reg_addr)
-        else:
-            print('Connection failed due to unknown reasons.')
 
 import os
 
