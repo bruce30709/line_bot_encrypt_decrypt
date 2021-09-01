@@ -57,11 +57,3 @@ class Base64():
         ## encode string as Latin-1 == ISO-8859-1
         return text_str.encode("ISO-8859-1")
 
-
- 
-a = Base64() 
-x=input()
-b=a.Decode('M&=wM].]VyA?GR&[GRA%I]Q#HOA_GRz/T%M?H?T@UR_%HBL?GRA.U?w>HSM*WS@'," ").decode()
-print(b)
-c=a.Encode(str.encode(x))
-print(c)
