@@ -55,11 +55,12 @@ def handle_message(event):
         if b[0]=='0':
             a = Base64()
             message=a.Encode(str.encode(b[1]))
+            print(message)
             line_bot_api.reply_message(event.reply_token,  message)
         if b[0]=="1":
-            k = 'djq%5cu#-jeq15abg$z9_i#_w=$o88m!*alpbedlbat8cr74sd'
             a = Base64()
             message=a.Decode(b[1]," ").decode()
+            print(message)
             line_bot_api.reply_message(event.reply_token,  message)
             #print(ODF_data)
     # you can write some codes here to handle the message sent by users
