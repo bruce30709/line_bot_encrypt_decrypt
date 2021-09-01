@@ -58,7 +58,7 @@ def handle_message(event):
             line_bot_api.reply_message(event.reply_token,  message)
         if b[0]=="1":
             a = Base64()
-            message=TextSendMessage(a.Decode(b[1]," ").decode())
+            message=TextSendMessage(a.Decode(b[1]," ").decode('utf-8'))
             print(message)
             line_bot_api.reply_message(event.reply_token,  message)
             #print(ODF_data)
