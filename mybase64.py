@@ -55,5 +55,6 @@ class Base64():
                 text_str += chr(int(bracket,2))
 
         ## encode string as Latin-1 == ISO-8859-1
-        return text_str.encode("utf-8")
+        return text_str.encode("ISO-8859-1")
+
 
