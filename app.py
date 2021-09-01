@@ -59,8 +59,9 @@ def handle_message(event):
         if b[0]=="1":
             a = Base64()
             message=TextSendMessage(a.Decode(b[1]," ").decode("ISO-8859-1"))
-            #print(message)
+            
             if message:
+                print(message)
                 line_bot_api.reply_message(event.reply_token,  message)
             
             #print(ODF_data)
